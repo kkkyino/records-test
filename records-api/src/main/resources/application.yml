@@ -1,0 +1,50 @@
+server:
+  application:
+    name: records-api
+  port: 8081
+  servlet:
+    context-path: /records
+spring:
+  redis:
+    host: 192.168.38.128
+    password: redis123
+    port: 6379
+    database: 0
+    timeout: 5000
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: 2000
+        max-idle: 8
+        min-idle: 0
+  rabbitmq:
+    host: 192.168.38.128
+    port: 5672
+    username: user
+    password: password
+  datasource:
+    url: jdbc:postgresql://192.168.38.130:15432/records
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      minimum-idle: 5
+      idle-timeout: 600000
+      maximum-pool-size: 10
+      auto-commit: true
+      max-lifetime: 1800000
+      connection-timeout: 30000
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+mybatis:
+  mapper-locations:
+    - classpath:mapper/*Mapper.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  level:
+    root: info
+    com.records.rest: debug

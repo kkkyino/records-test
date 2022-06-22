@@ -13,7 +13,7 @@ public class RedisTest {
 
     @Test
     public void rediSet(){
-        System.out.println("aa11");
+        System.out.println("aa111");
         redisUtil.set("中文1","中文1221");
     }
 }

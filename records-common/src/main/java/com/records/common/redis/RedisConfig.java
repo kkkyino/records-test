@@ -27,15 +27,15 @@ import java.time.Duration;
 @Configuration
 public class RedisConfig {
 
-    @Value("${spring.redis.host}")
+    @Value("${spring.redis.host : 127.0.0.1 }")
     private String hostName;
-    @Value("${spring.redis.port}")
+    @Value("${spring.redis.port : 6379 }")
     private Integer port;
-    @Value("${spring.redis.password}")
+    @Value("${spring.redis.password : }")
     private String password;
-    @Value("${spring.redis.database}")
+    @Value("${spring.redis.database : 0 }")
     private Integer database;
-    @Value("${spring.redis.timeout}")
+    @Value("${spring.redis.timeout : 5000 }")
     private Integer timeout;
 
     @Bean

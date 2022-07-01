@@ -20,7 +20,7 @@
 
 	<properties>
 		<recorde-common.version>0.1.0-Alpha</recorde-common.version>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 		<mybatis.version>2.2.2</mybatis.version>
 		<guava.version>31.1-jre</guava.version>
 		<netty.version>4.1.78.Final</netty.version>

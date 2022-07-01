@@ -23,7 +23,7 @@ spring:
     username: user
     password: password
   datasource:
-    url: jdbc:postgresql://192.168.38.130:15432/records
+    url: jdbc:postgresql://127.0.0.1:5432/records
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
